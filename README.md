@@ -115,29 +115,9 @@ terminates). A small persistent memory (`memory/memory_store.json`) tracks
 which checkpoints fail repeatedly across *all* past runs and warns the
 generator about those recurring pitfalls before it writes a first draft.
 
-## Tests
 
-Runs fully offline — no API key, no network calls — against scripted fake
-LLM clients (`tests/fakes.py`):
-
-```bash
-pytest -v
-```
-
-30 tests covering: first-attempt pass; fail-then-pass-on-retry with correct
-feedback threading; exhausting retries and still terminating with the
-least-bad attempt; a judge that omits a checkpoint counted as a **fail**,
-never a silent pass; memory pitfalls injected into prompts; a corrupted
-memory file never crashing a run.
 
 ## Project layout
 
 See [DESIGN.md §10](DESIGN.md#10-project-layout) for the annotated tree.
 
-## Submission
-
-| Deliverable | Where |
-|---|---|
-| GitHub repo + setup/run instructions | This README, [DESIGN.md](DESIGN.md), [docs/](docs/) |
-| Final lesson content | [`examples/introduction-to-rag/lesson.md`](examples/introduction-to-rag/lesson.md) — *(add Google Doc / Notion link here)* |
-| Loom video (15–20 min) | *(add recorded link here)* — script: [docs/VIDEO_SCRIPT.md](docs/VIDEO_SCRIPT.md) |
