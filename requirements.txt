@@ -1,0 +1,13 @@
+langgraph>=0.2.60
+langchain-core>=0.3.28
+langchain-google-genai>=2.0.7
+pydantic>=2.9.2
+python-dotenv>=1.0.1
+rich>=13.9.4
+
+# web UI
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+
+# dev / test
+pytest>=8.3.4
